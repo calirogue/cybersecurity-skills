@@ -37,3 +37,15 @@ Your folder structure should look exactly like this:
 └── skills/
     └── sensitive-scanner/
         └── SKILL.md
+```
+
+### Step 4: Run Your Skill
+Now that your skill file is saved, Copilot will automatically recognize the prompt intent or let you invoke it manually.
+
+1. Open any code file or configuration file you want to inspect.
+
+2. Open your Copilot Chat panel.
+
+3. Type /sensitive-scanner followed by your instruction (e.g., "/sensitive-scanner check this file for leaks" or simply type "scan this file").
+
+4. Press Enter.

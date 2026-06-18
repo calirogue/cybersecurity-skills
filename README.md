@@ -39,6 +39,8 @@ Your folder structure should look exactly like this:
         └── SKILL.md
 ```
 
+---
+
 ### Step 4: Run Your Skill
 Now that your skill file is saved, Copilot will automatically recognize the prompt intent or let you invoke it manually.
 

@@ -6,24 +6,13 @@ Companion skills: Feed flagged transactions and confirmed fraud indicators into 
 
 ---
 
-DATA INPUT INSTRUCTIONS:
+DATA INPUT: Attach or paste financial data from $ARGUMENTS. Accepted: GL export (CSV/tabular), bank statements, Form 990, HOA balance sheets/income statements, POS Z-tapes, AP journals, vendor invoices, special assessment ledgers, crowdfunding records.
 
-Paste or attach raw financial data from $ARGUMENTS. Accepted formats:
-- General Ledger (GL) export: CSV, tabular text, or column-formatted data
-- Bank statements: tabular transaction data (date, description, debit, credit, balance)
-- IRS Form 990 data: line-item financial figures by year
-- HOA balance sheets, income statements, reserve fund statements
-- POS cash logs: daily Z-tape summaries or transaction-level exports
-- Vendor invoices: invoice number, vendor name, date, amount, GL account coded
-- Accounts Payable (AP) journals: check number, payee, amount, date, GL account
-- Special assessment ledgers, dues collection records, crowdfunding totals
-
-If no data is provided in $ARGUMENTS, prompt:
-"Please paste your financial data directly into the chat, or describe the data sources available. Specify: (1) the entity type (HOA, nonprofit, corporation), (2) the time period covered, (3) which reports you have available, and (4) the specific concern that triggered this review."
+If no data provided in $ARGUMENTS, prompt: "Please describe: (1) entity type (HOA, nonprofit, corporation), (2) time period, (3) reports available, and (4) the specific concern triggering this review."
 
 ---
 
-Upon receiving data, execute all four modules sequentially. Present each module's output in full before proceeding to the next. Do not summarize or abbreviate. Every figure cited must be traceable to a specific line item, date, or transaction in the source data.
+Execute all four modules sequentially. Do not summarize or abbreviate. Every figure must be traceable to a specific line item in the source data. If a prior forensic report for this entity already exists in `output/financial-forensics/`, note it in the file header and avoid re-deriving conclusions already established.
 
 ---
 
@@ -187,22 +176,7 @@ Interpretation: [e.g., "Excess of 9-digit transactions consistent with structuri
 
 ### 2B. Second-Digit Analysis
 
-**Theoretical Second-Digit Distribution:**
-
-| Second Digit | Expected Frequency |
-|---|---|
-| 0 | 11.97% |
-| 1 | 11.39% |
-| 2 | 10.88% |
-| 3 | 10.43% |
-| 4 | 10.03% |
-| 5 | 9.67% |
-| 6 | 9.34% |
-| 7 | 9.04% |
-| 8 | 8.76% |
-| 9 | 8.50% |
-
-Apply same Z-statistic calculation as first-digit analysis. Second-digit analysis is particularly sensitive to rounding and fabrication — human-fabricated amounts tend toward round second digits (0, 5) at higher-than-expected rates.
+Expected: 0→11.97%, 1→11.39%, 2→10.88%, 3→10.43%, 4→10.03%, 5→9.67%, 6→9.34%, 7→9.04%, 8→8.76%, 9→8.50%. Apply same Z-statistic method as 2A. Fabricated amounts over-index on 0 and 5.
 
 ---
 
@@ -476,78 +450,28 @@ Range (low–high accounting for undetected skimming): $[Low] − $[High]
 
 ### 4B. Follow-the-Money Roadmap
 
-Present a prioritized investigative sequence based strictly on the numerical patterns identified:
+Present a prioritized investigative sequence by dollar magnitude, evidence strength, and statute of limitations:
 
 ```
-FORENSIC INVESTIGATION ROADMAP
-Priority order determined by: dollar magnitude, evidence strength, and statute of limitations considerations
+STEP 1 — EVIDENCE PRESERVATION: Serve document preservation demand / litigation hold on all accounts, POS systems, and payroll platforms flagged in Modules 1–3. Flag records approaching destruction schedules.
 
-STEP 1 — IMMEDIATE EVIDENCE PRESERVATION
-Action: Serve formal document preservation demand / litigation hold
-Target records: [List specific accounts, POS systems, payroll platforms flagged in Modules 1–3]
-Rationale: [Specific transactions identified that require source document verification]
-Time sensitivity: [Flag if any records are approaching destruction schedule]
+STEP 2 — BANK RECORDS: Subpoena [N] months of original statements directly from institutions for all flagged accounts. Confirm GL-to-bank variances; identify undisclosed accounts.
 
-STEP 2 — BANK RECORD SUBPOENA / DEMAND
-Action: Obtain [N] months of original bank statements directly from financial institution
-Accounts: [List all accounts identified in reconciliation]
-Specific items to verify: [List check numbers, ACH IDs, wire reference numbers from Exception Log]
-Purpose: Confirm GL-to-bank variances and identify any accounts not disclosed in provided records
+STEP 3 — VENDOR INVESTIGATION: Run all flagged vendors through state business registry, IRS TIN matching, and board member address cross-reference. Verify physical existence. Prioritize by dollar amount.
 
-STEP 3 — VENDOR INVESTIGATION
-Action: Run all [N] flagged vendors through:
-  - State business registry: [Specific states]
-  - IRS TIN matching
-  - Board member address cross-reference
-  - Physical existence verification
-Priority vendors: [List top flagged by dollar amount and shell company indicators]
+STEP 4 — PAYROLL AUDIT: Obtain W-2s, 941s, and direct deposit routing records for flagged periods. Cross-reference employee names against observable staffing and facility logs.
 
-STEP 4 — PAYROLL AUDIT
-Action: Obtain W-2s, 941s, and direct deposit routing records for all employees in flagged periods
-Specific anomalies to resolve: [List from Module 3]
-Cross-reference: Employee names vs. observable staffing, facility logs, event attendance records
+STEP 5 — POS FORENSIC EXPORT: Extract full transaction-level POS data including operator ID for every void/refund/comp, training mode log, and cash-vs-card breakdown. (Square: Dashboard → Reports → Transactions CSV; Toast: Restaurant → Reports → Sales Summary → Export)
 
-STEP 5 — POS SYSTEM FORENSIC EXPORT
-Action: Extract full transaction-level POS data (not just Z-tapes) including:
-  - Operator ID for every void/refund/comp
-  - Training mode transaction log
-  - All payment method breakdowns (cash vs. card by transaction)
-  - Raw database export (Square: Dashboard → Reports → Transactions CSV; Toast: Restaurant → Reports → Sales Summary → Export)
+STEP 6 — RESERVE FUND TRACE: Obtain complete statement history for all reserve accounts. Map: withdrawal → board resolution → expenditure. Flag withdrawals without prior board authorization.
 
-STEP 6 — RESERVE / DEDICATED FUND TRACE
-Action: Obtain complete statement history for reserve fund account
-Map: Every withdrawal → supporting resolution/authorization → underlying expenditure
-Flag: Any withdrawal without corresponding board resolution authorizing the specific expenditure
+STEP 7 — CROSS-ENTITY TRACE: For each confirmed shell vendor: trace all payments received, subpoena bank account ownership, map downstream payments (kickback destination), and verify tax filings.
 
-STEP 7 — CROSS-ENTITY TRACE (if shell vendors identified)
-Action: For each shell vendor entity confirmed, trace:
-  - All payments received from target entity
-  - Bank account ownership (subpoena)
-  - Downstream payments from shell vendor account (kickback destination)
-  - Tax returns filed (or not filed) by shell entity
+STEP 8 — TAX RECONCILIATION: Compare 1099s issued vs. total AP payments; 941s vs. payroll ledger; 990 revenue vs. bank deposits. Subpoena personal returns of subjects if law enforcement.
 
-STEP 8 — TAX DOCUMENT RECONCILIATION
-Action: Compare:
-  - 1099s issued by entity to vendors vs. total AP payments to those vendors
-  - 941 quarterly payroll reports vs. payroll register totals
-  - 990 reported revenue vs. bank deposit totals (for nonprofits)
-  - Personal tax returns of identified subjects (subpoena if law enforcement)
+STEP 9 — FRAUD TIMELINE: Map all confirmed discrepancies month-by-month: first occurrence, peak loss months, apparent interruptions, cumulative loss. Drives SOL analysis and restitution calculation.
 
-STEP 9 — CHRONOLOGICAL FRAUD TIMELINE CONSTRUCTION
-Action: Using all confirmed discrepancies, build month-by-month fraud timeline:
-  - First date each scheme appears in data
-  - Peak loss months
-  - Any apparent interruptions (board elections, audit periods, management changes)
-  - Cumulative loss by month
-  - This timeline drives statute of limitations analysis and restitution calculation
-
-STEP 10 — EXPERT WITNESS REPORT PREPARATION
-Action: Compile all findings into court-admissible forensic report:
-  - Methodology disclosure (Benford's, ratio analysis, reconciliation)
-  - All source data cited with bates numbers (if litigation)
-  - Statistical analysis with confidence intervals
-  - Loss quantification with low/mid/high scenarios
-  - Expert opinion on whether patterns are consistent with fraud vs. error
+STEP 10 — EXPERT WITNESS REPORT: Compile methodology, all source data with bates numbers, statistical analysis with confidence intervals, and low/mid/high loss scenarios.
 ```
 
 ---

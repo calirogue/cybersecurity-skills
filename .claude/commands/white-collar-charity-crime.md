@@ -204,33 +204,15 @@ For each applicable federal statute, provide the citation, required proof elemen
 | Delays responding to financial inquiries from board members | Buys time to fabricate explanations |
 | Pushes to keep financial oversight "within the family" | Resists external scrutiny |
 
-### Forensic Accounting Procedures
+### Forensic Audit Protocol
 
-**Phase 1 — Preservation & Access**
-1. Secure immediate access to all bank accounts — obtain all 12–36 months of original bank statements directly from the financial institution (do not accept copies from the suspect)
-2. Preserve all digital records: QuickBooks/accounting software files, email archives, PayPal/Stripe/Venmo transaction logs, donation platform records
-3. Change all online banking passwords and remove suspect from all financial accounts immediately
-4. Issue litigation hold notice if legal action is anticipated
+For complete bank reconstruction, vendor verification, Benford's Law analysis, revenue integrity testing, and loss quantification, run **`/forensic-financials`** on available financial data *(skip if already completed for this case)*. For law enforcement referral and evidence packaging, run **`/whistleblower-strategy`**.
 
-**Phase 2 — Account Reconstruction**
-5. Reconstruct the general ledger from source documents (bank statements, cancelled checks, deposit slips) independently of any books maintained by the suspect
-6. Perform a complete deposit analysis: compare all deposits to documented revenue events (fundraisers, dues notices, donation receipts) and identify unexplained gaps
-7. Perform a complete disbursement analysis: trace every check, ACH, wire, and debit card transaction to a legitimate business purpose with supporting invoice
-
-**Phase 3 — Vendor and Payee Verification**
-8. Run all vendor names and EINs through IRS TIN matching and state business registry — identify ghost vendors
-9. Cross-reference vendor addresses against board member home addresses, family member addresses
-10. Subpoena or request bank records for identified suspicious payees
-
-**Phase 4 — Revenue Integrity Testing**
-11. Compare cash revenue during events to headcount, ticket sales, and comparable prior-year events — identify statistical skimming signals
-12. Apply Benford's Law analysis to the chart of accounts — anomalous first-digit distribution signals manipulation
-13. Analyze Form 990 reported revenue against bank deposit totals for the same period
-
-**Phase 5 — Documentation & Reporting**
-14. Prepare a forensic accounting report quantifying total losses by category (skimming, check fraud, ACH fraud, ghost vendor payments)
-15. Prepare a timeline of fraudulent transactions for law enforcement
-16. Calculate restitution amount including estimated undiscovered skimming based on revenue gap analysis
+**Immediate Preservation Actions:**
+1. Obtain bank statements directly from the financial institution (never through the suspect)
+2. Preserve digital records: QuickBooks files, email archives, PayPal/Stripe/Venmo logs, donation platform records
+3. Remove suspect from all financial accounts; change banking credentials immediately
+4. Issue litigation hold notice if legal action anticipated
 
 ### Reporting & Referral Pathways
 

@@ -366,52 +366,23 @@ Most NJ HOAs are NOT automatically exempt. The CTA exempts certain entities, but
 | Property manager resistant to transition upon contract termination | Records destruction concern; continuity of concealment |
 | Visible lifestyle improvements by board treasurer or property manager | Unexplained enrichment |
 
-### Forensic Accounting Procedures — Step-by-Step Case Construction
+### Forensic Audit & Referral Protocol
 
-**Phase 1 — Emergency Preservation (Day 1)**
-1. Serve written demand on HOA board for immediate production of all financial records under PREDFDA § 45:22A-46 — failure to produce within 10 business days is an independent DCA violation
-2. Simultaneously file DCA complaint to trigger regulatory subpoena authority and preserve evidence before destruction
-3. Notify HOA's bank of ongoing investigation; request all statements, signature cards, and authorized signer history directly from the institution — do NOT request through suspect
-4. Secure preservation of all digital records: property management software (AppFolio, Buildium, CINC), POS system exports, payroll system records, email archives
+For GL-to-bank reconciliation, POS audit, vendor verification, and payroll integrity procedures, run **`/forensic-financials`** on available financial data *(skip if already completed for this case)*. For evidence packaging and multi-agency filing strategy, run **`/whistleblower-strategy`**.
 
-**Phase 2 — Bank Account Reconstruction**
-5. Obtain 36–60 months of complete bank statements for ALL HOA accounts (operating, reserve, capital improvement, hospitality/food-beverage, savings) directly from the bank
-6. Reconcile every deposit to documented revenue source: dues assessment schedule, event registration receipts, ABC-reported liquor sales, venue rental contracts
-7. Identify and trace every disbursement: match each check, ACH, wire, and debit card transaction to an approved invoice with legitimate business purpose
-8. Flag all transfers between HOA accounts — particularly operating-to-reserve and reserve-to-operating — for authorization documentation
-9. Identify all payees and run against NJ Division of Revenue business registration database — flag unregistered or dissolved entities
+**NJ HOA Day-1 Preservation Actions:**
+1. Serve written demand under PREDFDA § 45:22A-46 — failure to produce within 10 business days is an independent DCA violation
+2. File DCA complaint simultaneously to trigger regulatory subpoena authority
+3. Request all bank statements, signature cards, and authorized signer history **directly from the financial institution** — never through the suspect
+4. Preserve digital records: AppFolio/Buildium/CINC exports, POS logs, payroll system, email archives
 
-**Phase 3 — Vendor & Contract Analysis**
-10. Obtain all contracts, bids, and change orders for infrastructure projects — compare to engineer's independent cost estimates for same scope
-11. Subpoena three competing bidders' records to determine if collusion occurred — compare bid submission timing and amounts
-12. Cross-reference all vendor TINs/EINs against board member Social Security Numbers and known family members through IRS TIN matching
-13. Commission independent engineering assessment of completed infrastructure work — compare scope certified as complete to work actually performed
-14. Request NJDEP permit files for all lake, dam, and wetlands projects — compare permitted scope to invoiced scope
-
-**Phase 4 — Hospitality Revenue Audit**
-15. Obtain all POS system Z-tapes and transaction logs for 24–36 months — compare daily sales totals to bank deposits
-16. Conduct independent liquor inventory reconciliation: opening inventory + purchases − ending inventory = theoretical pours; compare to POS-recorded pours (variance >5–8% indicates theft)
-17. Obtain ABC license filings and compare reported sales to POS and bank records
-18. Cross-reference event bookings (wedding contracts, private party agreements) to revenue recorded — identify off-book events
-19. Analyze food cost as percentage of food revenue monthly — deviation from 28–35% norm triggers skimming investigation
-20. Interview all hospitality staff (servers, bartenders, cooks) separately, outside management presence
-
-**Phase 5 — Payroll Integrity Audit**
-21. Obtain complete payroll records for 36 months: all employee names, SSNs, hours worked, pay rates, W-2s issued
-22. Cross-check employees against actual member-observed staffing at community events and facilities
-23. Verify direct deposit bank account ownership — ghost employees' deposits route to perpetrator's controlled accounts
-24. Compare hourly employees' claimed hours against facility reservation logs (pool open/closed, clubhouse events) — hours claimed during closed periods are fraudulent
-25. Request IRS Form 941 (quarterly payroll tax returns) filed by HOA — compare reported wages to payroll ledger
-
-**Phase 6 — Reporting & Law Enforcement Referral**
-26. Prepare forensic accounting report: total losses quantified by category (infrastructure fraud, hospitality skimming, payroll fraud, reserve misappropriation)
-27. Prepare transaction timeline mapped to specific statutory violations for each count
-28. File criminal complaint with County Prosecutor's Office (Major Crimes or Financial Crimes Unit in relevant NJ county)
-29. File concurrent DCA complaint (PREDFDA) with full documentation
-30. File IRS Form 3949-A (Information Referral) for tax fraud component
-31. File NJ ABC complaint if liquor license abuse is documented
-32. Consider filing FinCEN complaint if Corporate Transparency Act violations identified
-33. Retain NJ-licensed attorney to file derivative action in Superior Court on behalf of HOA membership — seek asset freeze via TRO before perpetrator can dissipate stolen funds
+**Law Enforcement Filing Checklist:**
+- County Prosecutor's Office (Major/Financial Crimes Unit)
+- NJ DCA complaint (PREDFDA violations)
+- IRS Form 3949-A (tax fraud referral)
+- NJ ABC complaint (liquor license abuse, if applicable)
+- FinCEN tip (CTA/shell company violations, if applicable)
+- NJ Superior Court derivative action — seek TRO/asset freeze before dissipation
 
 ### Prosecutorial Jurisdictional Matrix
 
